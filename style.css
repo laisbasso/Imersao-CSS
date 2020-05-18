@@ -30,6 +30,7 @@
         top: 0;
         width: 100vw;
         border-bottom: 2px solid #ffb129;
+        z-index: 2;
     }
     
     .menu ul {
@@ -67,14 +68,44 @@
         font-size: 3em;
     }
     
-    .contato,
-    .portfolio {
+    .sobre,
+    .portfolio,
+    .contato {
         padding: 2em;
+        padding-top: 5em;
+    }
+    
+    .sobre {
+        padding-top: 35vh;
+    }
+    
+    .sobre,
+    .portfolio {
+        min-height: 100vh;
     }
     
     h2 {
         margin-bottom: 1.5em;
         font-size: 2em;
+    }
+    
+    .sobre .avatar {
+        float: left;
+        display: block;
+    }
+    
+    .sobre .avatar img {
+        width: 140px;
+        border-radius: 50%;
+        margin-bottom: 0.5em;
+        transition: 0.5s;
+        display: block;
+    }
+    
+    .sobre p {
+        text-indent: 3.5em;
+        margin-bottom: 0.5em;
+        text-align: justify;
     }
     
     .portfolio .grid {
@@ -89,13 +120,14 @@
     }
     
     .img-portfolio {
-        width: 180px;
         height: 180px;
         /*object-fit: cover;
         object-position: bottom left;*/
         transition: 0.5s;
+        margin-bottom: 0.6em;
     }
     
+    .sobre .avatar img:hover,
     .img-portfolio:hover {
         transform: scale(1.1);
     }
@@ -107,7 +139,8 @@
     
     .contato a:active,
     .contato a:hover {
-        text-shadow: 0 0 2px rgb(105, 105, 105);
+        /*text-shadow: 0 0 2px rgb(105, 105, 105);*/
+        opacity: 0.7;
     }
     
     #github {
@@ -141,8 +174,13 @@
             justify-content: center;
         }
     }
-    /*@media (min-width: 1025px) {
-        .portfolio h2 {
-            margin-left: 15%;
+    
+    @media (min-width: 1200px) {
+        .sobre,
+        .contato,
+        .portfolio {
+            max-width: 1200px;
+            margin-left: auto;
+            margin-right: auto;
         }
-    }*/
+    }
