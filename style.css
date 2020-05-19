@@ -107,6 +107,10 @@ h2 {
     text-align: justify;
 }
 
+.sobre .right {
+    text-align: right;
+}
+
 .portfolio .grid {
     display: grid;
     gap: 2em;
@@ -142,6 +146,10 @@ h2 {
 
 #github {
     color: #262e31;
+}
+
+#codepen {
+    color: black;
 }
 
 #twitter {
